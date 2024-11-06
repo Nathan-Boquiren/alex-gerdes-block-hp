@@ -1,3 +1,5 @@
+const backendURl = 'https://image-upload-backend-whj4.onrender.com';
+
 document.getElementById('uploadForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
