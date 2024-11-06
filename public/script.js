@@ -9,7 +9,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
     formData.append('photo', photoInput);
 
     try {
-        const response = await fetch('${backendURL}/upload', {
+        const response = await fetch(`${backendURL}upload`, {
             method: 'POST',
             body: formData,
         });
@@ -39,7 +39,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
 // Function to fetch and display images
 async function fetchImages() {
     try {
-        const response = await fetch('${backendURL}/images'); // Fetch images from the server
+        const response = await fetch(`${backendURL}images`); // Fetch images from the server
         const images = await response.json(); // Parse JSON response
         console.log(images); // Log the images to check their URLs
 
