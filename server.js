@@ -42,7 +42,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-    const imageUrl = `/uploads/${req.file.filename}`;
+    const imageUrl = `${backendURL}uploads/${req.file.filename}`;
     return res.send({ message: 'File uploaded successfully', imageUrl });
 });
 
