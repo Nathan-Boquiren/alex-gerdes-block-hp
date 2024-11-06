@@ -4,6 +4,8 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');  // Importing CORS package
 
+const backendURL = 'https://image-upload-backend-whj4.onrender.com/';
+
 const app = express();
 
 const PORT = process.env.PORT || 3000;  // Use environment port or fallback to 3000
