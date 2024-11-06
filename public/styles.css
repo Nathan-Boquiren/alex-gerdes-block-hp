@@ -1,0 +1,352 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.upload-section {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 85vh;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+}
+
+.upload-section-header {
+    position: absolute;
+    top: 0;
+    background-color: limegreen;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.185);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.file-input {
+    display: none;
+}
+
+.custom-file-label {
+    aspect-ratio: 1;
+    outline: 2px dashed limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: limegreen;
+    font-size: 20px;
+    margin: 5vh 0 15px;
+    position: relative;
+    min-width: 170px;
+    transition: transform 0.1s ease;
+}
+.custom-file-label:active {
+    transform: scale(1.05);
+}
+.upload {
+    color: limegreen;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    font-family: 'Material Symbols Outlined';
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    animation: breathe 2s ease infinite;
+}
+
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(1.08);
+    }
+    66% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.file-name {
+    position: absolute;
+    bottom: 10px;
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+button {
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: limegreen;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px 0;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+button:active {
+    background-color: rgb(0, 177, 0);
+}
+#message {
+    margin-top: 20px;
+    color: limegreen;
+}
+
+h2 {
+    margin-top: 20px;
+}
+.page-break {
+    background-color: #a3a3a3;
+    height: 2px;
+    width: 90vw;
+    margin: 0 0 20px;
+}
+
+#gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.user-gallery {
+    display: flex;
+    margin-bottom: 20px;
+}
+.user-gallery img {
+    border-radius: 10px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 100%;
+    display: block;
+}
+
+.delete-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.delete-button:active {
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.view-images {
+    margin: 20px 0 50px;
+    padding: 10px;
+    background-color: limegreen;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-images:hover {
+    background-color: limegreen;
+    color: #fff;
+}
+
+
+.toast {
+    position: fixed;
+    bottom: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+footer {
+    background-color: #383838;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+.viewFooter {
+    margin-top: 3vh;
+    padding: 8px;
+}
+.viewFooter p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+/* ---------- VIEW IMAGES PAGE ---------- */
+
+#viewPage {
+    height: 100vh;
+}
+#view-page-header {
+    position: fixed;
+    top: 0;
+    background-color: limegreen;
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    padding: 20px 8px 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.185);
+    
+}
+#hamburger {
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 200;
+}
+.line {
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+#line1,
+#line2,
+#line3 {
+    transition: transform 0.2s ease;
+}
+
+#navMenu {
+    position: fixed;
+    top: 62px;
+    left: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color: limegreen;
+    color: white;
+    padding-top: 100px;
+    transition: left 0.3s ease; /* Smooth slide-in */
+    z-index: 90;
+    
+}
+
+
+#navMenu.show {
+    left: 0;
+    
+}
+
+#navMenu ul {
+    list-style-type: none;
+    padding: 0;
+    
+    
+}
+
+#navMenu li {
+    padding: 15px 20px;
+}
+
+#navMenu li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+#navMenu li a:active {
+    transform: scale(1.05);
+}
+
+#view-page-header h1 {
+    margin: 0;
+    z-index: 200;
+}
+
+
+
+
+
+
+/* Feed container with scroll snapping */
+.feed-container {
+    /* margin-top: 5px; */
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding: 88px;
+}
+
+.feed-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.feed-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    border-radius: 7px;
+}
+.feed-gallery img:first-child {
+    margin-top: 7px;
+}
+

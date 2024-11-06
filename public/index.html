@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+
+    <title>Block HP</title>
+</head>
+<body>
+    <div class="upload-section">
+        <div class="upload-section-header">
+            <h1>Upload a Photo</h1>
+        </div>
+        <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+            <input type="file" name="photo" accept="image/*" required class="file-input" id="photoInput">
+            
+            <label for="photoInput" class="custom-file-label">
+                <span class="upload">upload</span>
+                <span class="file-name" id="fileName">Choose File</span>
+            </label>
+        
+            <button type="submit">Upload</button>
+        </form>
+
+        <div id="message"></div>
+        
+    </div>
+
+
+
+    <h2>Uploaded Images</h2>
+    <span class="page-break"></span>
+    <div class="user-gallery" id="gallery"></div>
+
+    <a class="view-images" href="view.html">
+        View All Uploaded Images
+        <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+
+
+    <div id="toast" class="toast" style="display: none;">Image deleted successfully.</div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Proudly created by Nathan Boquiren :)</p>
+    </footer>
+</body>
+</html>
