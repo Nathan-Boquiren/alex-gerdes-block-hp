@@ -1,4 +1,4 @@
-const backendURl = 'https://image-upload-backend-whj4.onrender.com';
+const backendURL = 'https://image-upload-backend-whj4.onrender.com';
 
 
 async function fetchImages() {
