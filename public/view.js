@@ -1,6 +1,9 @@
+const backendURl = 'https://image-upload-backend-whj4.onrender.com/';
+
+
 async function fetchImages() {
     try {
-        const response = await fetch('/images'); // Fetch images from the server
+        const response = await fetch('${backendURL}/images'); // Fetch images from the server
         const images = await response.json(); // Parse JSON response
 
         const gallery = document.getElementById('gallery');
