@@ -85,7 +85,7 @@ document.getElementById('photoInput').addEventListener('change', function() {
 // Function to delete an image
 async function deleteImage(filename) {
     try {
-        const response = await fetch(`/delete/${filename}`, {
+        const response = await fetch(`${backendURL}delete/${filename}`, {
             method: 'DELETE',
         });
 
