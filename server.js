@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;  // Use environment port or fallback to 3000
 
 // Allow requests from GitHub Pages (frontend URL)
-const allowedOrigins = ['https://nathan-boquiren.github.io'];  // Replace with your actual GitHub Pages URL
+const allowedOrigins = ['https://nathan-boquiren.github.io/alex-gerdes-block-hp'];  // Replace with your actual GitHub Pages URL
 
 // Enable CORS for your frontend
 app.use(cors({
